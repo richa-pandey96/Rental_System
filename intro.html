@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .spinner{
+            width: 4em;
+            height: 4em;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 2px solid #444;
+            border-radius: 50%;
+            box-shadow: -10px -10px 10px #6359f8,
+                         0px -10px 10px 0px #9c32e2,
+                         10px -10px 10px #f36896,10px 0px 10px #ff0b0b,
+                         10px 10px 10px 0px #ff5500,0px 10px 10px 0px #ff9500,
+                         10px -10px 10px 0px #ffb700,
+                         10px -10px 0px #df0b04,10px -10px 10px 0px #00ddff;
+            animation: rot55 1s linear infinite;
+        }
+        .spinnerIn{
+            border: 2px solid #444;
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .innerbutton{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color:red;
+            animation-name:buttoncolor;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes buttoncolor {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: rgb(0, 255, 110);}
+            75%  {background-color: #ffb700;}
+            100% {background-color: green;}
+            
+        }
+        @keyframes rot55{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    <div class="spinner">
+        <div class="spinnerIn">
+            <button class="innerbutton" style="border-radius: 50%; border: 1px solid black; height: 2em; width: 2em;"
+            onclick="location.href='index.html';"></button>
+        </div>
+    </div>
+</body>
+</html>
